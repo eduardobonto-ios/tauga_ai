@@ -20,6 +20,12 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Vercel — must never be committed: Vercel's Build Output API treats a
+# checked-in .vercel/output as a "prebuilt" deployment and skips the actual
+# build step entirely, silently deploying whatever was built locally at
+# commit time instead of building fresh from source + current env vars.
+.vercel
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
