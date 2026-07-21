@@ -259,53 +259,6 @@ function AdminPage() {
             />
           </label>
         </section>
-
-        <section className="lg:col-span-3 rounded-2xl border border-border bg-card p-6 shadow-card">
-          <h2 className="mb-4 text-xl">n8n webhook configuration</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            <label className="text-sm">
-              <div className="mb-1 text-muted-foreground">Chat webhook URL</div>
-              <input
-                className="w-full rounded-md border border-input bg-background px-3 py-2 outline-none focus:border-ring"
-                value={chatHook}
-                onChange={(e) => setChatHook(e.target.value)}
-                placeholder="https://…/webhook/hotel-chat"
-              />
-            </label>
-            <label className="text-sm">
-              <div className="mb-1 text-muted-foreground">
-                PDF-upload webhook URL{" "}
-                <span className="text-xs">(optional — falls back to chat)</span>
-              </div>
-              <input
-                className="w-full rounded-md border border-input bg-background px-3 py-2 outline-none focus:border-ring"
-                value={pdfHook}
-                onChange={(e) => setPdfHook(e.target.value)}
-                placeholder="https://…/webhook/hotel-pdf"
-              />
-            </label>
-            <label className="text-sm">
-              <div className="mb-1 text-muted-foreground">
-                Contact-lead webhook URL{" "}
-                <span className="text-xs">(optional — emails the team when a guest leaves details)</span>
-              </div>
-              <input
-                className="w-full rounded-md border border-input bg-background px-3 py-2 outline-none focus:border-ring"
-                value={contactHook}
-                onChange={(e) => setContactHook(e.target.value)}
-                placeholder="https://…/webhook/hotel-contact-lead"
-              />
-            </label>
-          </div>
-          <div className="mt-4 flex justify-end">
-            <button
-              onClick={saveSettings}
-              className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-            >
-              Save
-            </button>
-          </div>
-        </section>
       </div>
     </main>
   );

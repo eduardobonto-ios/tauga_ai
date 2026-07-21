@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Deploy target is Vercel, not the Cloudflare Workers default — Vercel's
+  // standard Serverless Functions run on Node.js, which is what src/lib/n8n-proxy.ts
+  // needs to actually be "a Node.js backend" rather than a V8-isolate runtime.
+  nitro: {
+    preset: "vercel",
+  },
 });
